@@ -1,29 +1,52 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons/faCartShopping";
 import React from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/AuthContext";
 import styles from "./Navbar.module.css";
-
-// TODO implementar el ruteo con la libreria correspondiente
-
-// TODO crear un componente que muestra el nombre del usuario logueado
-
-// TODO crear un componente que permita ver cuantos items hay en el carrito
-
-// TODO! recordar que las librerias deben ser instaladas con npm install
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+
+  const { user, logout } = useContext(AuthContext)
+  
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+
+      logout()
+
+      navigate('/login', {
+      replace: false
+    })
+  }
+
   return (
     <nav className={styles.navbar}>
-      <ul>
-        <li>
-          <a href="#inicio">Inicio</a>
-        </li>
-      </ul>
+      <div>
+        <ul>
+          <li>
+            <span>Bienvenido {user}</span>
+          </li>
+        </ul>
+      </div>
 
-      <ul>
-        <li>
-          {/* logout */}
-          <a href="#salir">Salir</a>
-        </li>
-      </ul>
+      <div className={styles.navbar_div}>
+        <ul>
+          <li>
+            <Link to={"/checkout"}>
+              <FontAwesomeIcon icon={faCartShopping}/>
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            {/* logout */}
+            <Link onClick={handleClick}>Salir</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

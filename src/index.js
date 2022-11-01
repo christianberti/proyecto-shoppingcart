@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import Layout from "./components/layout/Layout";
 import ProductsProvider from "./context/products/ProductsProvider";
 import CartProvider from "./context/cart/CartProvider";
+import AppRoutes from "./routes/AppRoutes";
+import { AuthProvider } from "./auth/AuthProvider";
 
 /* 
 
@@ -40,12 +40,12 @@ import CartProvider from "./context/cart/CartProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <CartProvider>
-      <ProductsProvider>
-        <Layout>
-          <App />
-        </Layout>
-      </ProductsProvider>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <ProductsProvider>
+          <AppRoutes />
+        </ProductsProvider>
+      </CartProvider>
+    </AuthProvider>
   </React.StrictMode>
 );

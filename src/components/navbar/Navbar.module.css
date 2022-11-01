@@ -6,7 +6,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  margin: 0px 20px;
+}
+
+.navbar_div {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar span {
+  color: var(--color-text);
 }
 
 .navbar ul {
@@ -15,7 +24,7 @@
 }
 
 .navbar li {
-  margin: 0 3rem;
+  margin: 0 1.5rem;
 }
 
 .navbar a {
@@ -23,6 +32,12 @@
   color: var(--color-text);
 }
 
-.navbar a.active {
-  color: #f00;
+.navbar a:hover {
+  font-size: 3rem;
+  color: var(--color-primary);
+}
+
+.navbar ul input {
+  margin-right: 40px;
+  text-align: center;
 }

@@ -10,25 +10,25 @@ const SocialMedia = () => {
         url="https://www.facebook.com/"
         fgColor="#fff"
         bgColor={COLORSAPP.background}
-        style={{ height: 35, width: 35 }}
+        style={{ height: 30, width: 30 }}
       />
       <SocialIcon
         url="https://www.instagram.com/"
         fgColor="#fff"
         bgColor={COLORSAPP.background}
-        style={{ height: 35, width: 35 }}
+        style={{ height: 30, width: 30 }}
       />
       <SocialIcon
         url="https://www.twitter.com/"
         fgColor="#fff"
         bgColor={COLORSAPP.background}
-        style={{ height: 35, width: 35 }}
+        style={{ height: 30, width: 30 }}
       />
       <SocialIcon
         url="https://www.linkedin.com/"
         fgColor="#fff"
         bgColor={COLORSAPP.background}
-        style={{ height: 35, width: 35 }}
+        style={{ height: 30, width: 30 }}
       />
     </div>
   );
