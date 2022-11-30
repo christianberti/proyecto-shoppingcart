@@ -58,7 +58,7 @@
 }
 
 .buttons button {
-  border-radius: 30%;
+  border-radius: 10px;
   border: none;
   padding: 5px 10px;
   align-self: center;
@@ -67,12 +67,22 @@
   color: var(--color-background)
 }
 
+.buttons button:hover {
+  background-color: #a1a1a1;
+}
+
 .buttons_add button {
-  border: 1px solid ;
-  border-radius: 30px;
+  border: 1px solid;
+  border-radius: 20px;
   background-color: var(--color-background-light);
   color: var(--color-text);
   padding: 8px;
+}
+
+.buttons_add button:hover {
+  border: 1px solid #a1a1a1;
+  color: var(--color-background);
+  box-shadow: 3px 3px 3px black;
 }
 
 .buttons h4 {

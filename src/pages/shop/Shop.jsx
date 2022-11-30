@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import ProductCard from "../../components/product-card/ProductCard";
 import { useProducts } from "../../context/products/ProductsProvider";
 import styles from "./Shop.module.css";
-import { CartContext } from '../../context/cart/CartContext'
 
 const Shop = () => {
+
   const products = useProducts();
 
   return (
@@ -13,6 +13,8 @@ const Shop = () => {
 
           {products.map((product) => (
             <ProductCard
+              id={product.id}
+              product={product}
               key={product.id}
               image={product.image}
               alt={product.alt}

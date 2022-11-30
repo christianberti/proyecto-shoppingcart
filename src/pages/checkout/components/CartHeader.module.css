@@ -1,0 +1,52 @@
+.cartHeaderContainer {
+    background: linear-gradient(
+      199deg,
+      var(--color-background) 0%,
+      var(--color-secondary) 100%
+    );
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+  }
+  
+  .navbar_div {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .cartHeader span {
+    color: var(--color-text);
+  }
+  
+  .cartHeader ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .cartHeader li {
+    margin: 0 1.5rem;
+  }
+  
+  .cartHeader a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  
+  .cartHeader a:hover {
+    font-size: 3rem;
+    color: var(--color-primary);
+  }
+  
+  .cartHeader ul input {
+    margin-right: 40px;
+    text-align: center;
+  }
